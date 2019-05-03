@@ -1,3 +1,5 @@
+// Copyright (C) 2019 My Free Software Regulation
+// Anyone who understands has the right to develop this sketch
 // Programator pentru udare la ora fixa in sera
 // Partea de ceas este din exemplul de ceas din biblioteca RTClib
 // by Pekatonix / http:pekatonix.ro / Targu Mures, 2/05/2019

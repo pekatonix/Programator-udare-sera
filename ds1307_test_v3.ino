@@ -1,4 +1,5 @@
 // Programator pentru udare la ora fixa in sera
+// Copyright (C) 2019 My Free Software Regulation
 // Partea de ceas este din exemplul de ceas din biblioteca RTClib
 // by Pekatonix / http:pekatonix.ro / Targu Mures, 2/05/2019
 

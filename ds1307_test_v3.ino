@@ -12,14 +12,14 @@ RTC_DS1307 rtc;
 
 int Relay = 8;
 
-const int OnHour1 = 18; // Definire ora de pornire dimineata
-const int OnMin1 = 30;
-const int OffHour1 = 18; // Definire ora de oprire dimineata
-const int OffMin1 = 32;
-const int OnHour2 = 18; // Definire ora de pornire seara
-const int OnMin2 = 34;
-const int OffHour2 = 18; // Definire ora de oprire seara
-const int OffMin2 = 36;
+const int OnHour1 = 5; // Definire ora de pornire dimineata
+const int OnMin1 = 05;
+const int OffHour1 = 5; // Definire ora de oprire dimineata
+const int OffMin1 = 55;
+const int OnHour2 = 23; // Definire ora de pornire seara
+const int OnMin2 = 05;
+const int OffHour2 = 23; // Definire ora de oprire seara
+const int OffMin2 = 45;
 
 void setup () {
     lcd.begin(16, 2);
@@ -31,11 +31,9 @@ void setup () {
   }
 
   if (! rtc.isrunning()) {
-    Serial.println("RTC is NOT running!");
-    // following line sets the RTC to the date & time this sketch was compiled
-     rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
-    // This line sets the RTC with an explicit date & time, for example to set
-    // January 21, 2014 at 3am you would call:
+    Serial.println("RTC is NOT running!"); 
+    // rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));	// pentru reglajul automat al datei si a orei se decomenteaza linia 
+    // January 21, 2014 at 3am you would call:	 // Reglajul manual al date si orei
     // rtc.adjust(DateTime(2014, 1, 21, 3, 0, 0));
   }
 }
@@ -67,15 +65,15 @@ void loop () {
 	  if (now.hour() == OnHour1 && now.minute() == OnMin1)
 	  {
     digitalWrite(Relay,LOW);
-    Serial.println("LIGHT ON");
+    Serial.println("WATER ON");
     lcd.setCursor(3,1);
-    lcd.print("Water ON");
+    lcd.print("Water ON ");
     }
    
     else if(now.hour() == OffHour1 && now.minute() == OffMin1)
     {
       digitalWrite(Relay,HIGH);
-      Serial.println("LIGHT OFF");
+      Serial.println("WATER OFF");
       lcd.setCursor(3,1);
       lcd.print("Water OFF");
     }
@@ -83,15 +81,15 @@ void loop () {
 		  if (now.hour() == OnHour2 && now.minute() == OnMin2)
 	  {
     digitalWrite(Relay,LOW);
-    Serial.println("LIGHT ON");
+    Serial.println("WATER ON");
     lcd.setCursor(3,1);
-    lcd.print("Water ON");
+    lcd.print("Water ON ");
     }
    
     else if(now.hour() == OffHour2 && now.minute() == OffMin2)
     {
       digitalWrite(Relay,HIGH);
-      Serial.println("LIGHT OFF");
+      Serial.println("WATER OFF");
       lcd.setCursor(3,1);
       lcd.print("Water OFF");
     }

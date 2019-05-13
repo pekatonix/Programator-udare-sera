@@ -12,14 +12,14 @@ RTC_DS1307 rtc;
 
 int Relay = 8;
 
-const int OnHour1 = 5; // Definire ora de pornire dimineata
-const int OnMin1 = 05;
-const int OffHour1 = 5; // Definire ora de oprire dimineata
-const int OffMin1 = 55;
+const int OnHour1 = 05; // Definire ora de pornire dimineata
+const int OnMin1 = 00;
+const int OffHour1 = 05; // Definire ora de oprire dimineata
+const int OffMin1 = 45;
 const int OnHour2 = 23; // Definire ora de pornire seara
-const int OnMin2 = 05;
+const int OnMin2 = 00;
 const int OffHour2 = 23; // Definire ora de oprire seara
-const int OffMin2 = 45;
+const int OffMin2 = 15;
 
 void setup () {
     lcd.begin(16, 2);

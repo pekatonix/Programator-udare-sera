@@ -1,4 +1,9 @@
+// Programator pentru udare la ora fixa in sera
+// Copyright (C) 2019 My Free Software Regulation
 // Date and time functions using a DS3231 RTC connected via I2C and Wire lib
+// Masurarea nivelului din rezervor cu 3 sonde si afisajul pe LCD 16x2 via I2C; sursa https://www.electroschematics.com/9964/arduino-water-level-indicator-controller/
+// by Pekatonix / http:pekatonix.ro / Targu Mures, 4/07/2019
+
 #include <Wire.h>
 #include "RTClib.h"
 #include <LiquidCrystal_I2C.h>

@@ -1,4 +1,8 @@
+// Programator pentru udare la ora fixa in sera
+// Copyright (C) 2019 My Free Software Regulation
 // Date and time functions using a DS3231 RTC connected via I2C and Wire lib
+// by Pekatonix / http:pekatonix.ro / Targu Mures, 2/05/2019
+
 #include <Wire.h>
 #include "RTClib.h"
 #include <LiquidCrystal_I2C.h>
